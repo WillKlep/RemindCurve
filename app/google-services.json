@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "563846067591",
+    "project_id": "remindcurve",
+    "storage_bucket": "remindcurve.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563846067591:android:fae29eed3ab67dbb600f22",
+        "android_client_info": {
+          "package_name": "com.willklep.remindcurve"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563846067591-pshvd8k6knublp5rndtqfvucarku9mug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFoX1t43AilLpRXfDov1LGcNJ1VwNcqRY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563846067591-pshvd8k6knublp5rndtqfvucarku9mug.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
