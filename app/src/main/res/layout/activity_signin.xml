@@ -4,43 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/main_red"
+    android:orientation="vertical"
+    tools:context=".SignInController">
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_image"
-        android:layout_width="189dp"
-        android:layout_height="160dp"
-        android:src="@drawable/logo"
-        app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@drawable/trans_white_text"
+        android:contentDescription="@string/remindcurve_app_logo_desc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.157" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="263dp"
-        android:layout_height="55dp"
-        android:fontFamily="@font/roboto_bold"
-        android:gravity="center"
-        android:text="Android programmers"
-        android:textSize="24sp"
+    <ImageView
+        android:id="@+id/curved_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/curved_rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image"
-        app:layout_constraintVertical_bias="0.061" />
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        android:layout_marginTop="375dp"/>
 
     <TextView
         android:id="@+id/signInWithGoogle"
         android:layout_width="310dp"
         android:layout_height="48dp"
-        android:background="@drawable/rectangle"
+        android:background="@drawable/black_border"
         android:gravity="center"
-        android:text="Sign in with Google"
+        android:text="@string/sign_in_with_google"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,6 +52,7 @@
         android:layout_width="34dp"
         android:layout_height="29dp"
         android:layout_marginEnd="248dp"
+        android:contentDescription="@string/google_logo_icon"
         app:layout_constraintBottom_toBottomOf="@+id/signInWithGoogle"
         app:layout_constraintEnd_toEndOf="@+id/signInWithGoogle"
         app:layout_constraintTop_toTopOf="@+id/signInWithGoogle"

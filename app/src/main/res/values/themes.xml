@@ -2,8 +2,22 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.RemindCurve" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- Make text black for light theme -->
+        <item name="android:textColorPrimary">@color/black</item>
+
+        <!-- Status bar color -->
+        <item name="android:statusBarColor" >@color/main_red</item>
     </style>
 
     <style name="Theme.RemindCurve" parent="Base.Theme.RemindCurve" />
+
+    <style name="Theme.RemindCurve.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.RemindCurve.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.RemindCurve.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
