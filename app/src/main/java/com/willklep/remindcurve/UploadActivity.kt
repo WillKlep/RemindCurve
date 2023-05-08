@@ -19,6 +19,8 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import java.time.LocalDate
+import java.time.ZoneId
+import java.util.Date
 
 
 class UploadActivity : AppCompatActivity() {
@@ -88,8 +90,12 @@ class UploadActivity : AppCompatActivity() {
             val topic = topicEditText.text.toString().trim()
             selectedClass = courseEditText.text.toString().trim()
             if (selectedClass != null && topic.isNotEmpty() && startDate != null && endDate != null) {
-                val task = Task(topic = topic, className = selectedClass!!, startDate = startDate!!,
-                    endDate = endDate!!)
+                val task = Task(topic = topic, className = selectedClass!!, startDate = Date.from(
+                    startDate!!.atStartOfDay(
+                    ZoneId.systemDefault()).toInstant()),
+                    endDate =  Date.from(
+                        endDate!!.atStartOfDay(
+                            ZoneId.systemDefault()).toInstant()))
                 // Upload task to Firebase
                 val taskRef = database.child("users").child(FirebaseAuth.getInstance().currentUser?.uid.toString()).child("tasks").push()
                 taskRef.setValue(task)
